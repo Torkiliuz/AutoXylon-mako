@@ -63,7 +63,7 @@ cd aosp
 # Initialize repo, and synchronize it…
 echo -e "${bldcya}Initializing and synchronizing code repository ${txtrst}";
 repo init -u git://github.com/XYAOSP/platform_manifest.git -b jb4.2
-repo sync -j16
+repo sync -j4
 
 # Fix permissions for build-script…
 echo -e "${bldcya}Fixing the permissions for the build-script ${txtrst}";
@@ -71,7 +71,7 @@ chmod 775 build-xy.sh
 
 # Run build-script…
 echo -e "${bldcya}Running build script ${txtrst}";
-./build-xy.sh mako sync 16
+./build-xy.sh mako
 
 #Time spent
 res2=$(date +%s.%N)
