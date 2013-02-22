@@ -6,9 +6,10 @@
 
 
 # Get colored text…
-cya=$(tput setaf 6)                   #  Cyan
-bldcya=${txtbld}$(tput setaf 6) #  Bold cyan
-txtrst=$(tput sgr0)                    #  Reset colors
+txtbld=$(tput bold)                   # Bold
+cya=$(tput setaf 6)                   # Cyan
+bldcya=${txtbld}$(tput setaf 6)       # Bold cyan
+txtrst=$(tput sgr0)                   # Reset colors
 
 # Start-time of script
 res1=$(date +%s.%N)
